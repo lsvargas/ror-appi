@@ -1,5 +1,3 @@
-# Beetrack Assignment App
-
 ### Overview
 This application is built in Ruby on Rails, it works also as an API. It shows a vehicle's most recent coordinates in a map.
 
