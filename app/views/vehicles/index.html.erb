@@ -1,0 +1,16 @@
+<h1>Vehículo <%= @vehicle&.vehicle_identifier %></h1>
+
+
+<% if @vehicle %>
+  <h4>Coordenada mas reciente enviada: <%= @waypoint["sent_at"] %></h4>
+
+  <div
+  data-controller="map"
+  data-map-access-token="<%= Rails.application.credentials.mapbox_api_key %>"
+  data-map-waypoint="<%= @waypoint.to_json %>"
+  >
+    <div id="map" style="width: 400px; height: 300px;"></div>
+  </div>
+<% else %>
+  <h4> No existen vehículos en la DB </h4>
+<% end %>
